@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.levent_j.baselibrary.views.MainTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.levent_j.business.views.MyEditTextView
+        android:id="@+id/et_create_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.levent_j.business.views.MyEditTextView
+        android:id="@+id/et_create_shop_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.levent_j.business.views.MyEditTextView
+        android:id="@+id/et_create_shop_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="上传封面"
+        android:textColor="@color/color_primary"
+        android:textSize="12sp"/>
+
+    <com.levent_j.baselibrary.views.ImageSelectView
+        android:id="@+id/iv_create_shop_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_create_submit"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_next"
+        android:text="提交"
+        android:textColor="@color/color_text_white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

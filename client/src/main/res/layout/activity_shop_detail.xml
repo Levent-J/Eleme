@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:visibility="visible">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/color_primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.levent_j.client.common.views.ShopDetailHeader
+                android:id="@+id/view_shop_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="0.7"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_gray"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_text_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="菜单"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_gray"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_shop_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_text_white">
+
+                <TextView
+                    android:id="@+id/tv_seat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="座位"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seat_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_seat_title"
+                    android:text="小桌1-2人 中卓3-4人 大桌5人以上"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="12sp"/>
+
+                <View
+                    android:id="@+id/line_seat_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_seat_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_seatA_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatA_book"
+                    android:layout_alignTop="@+id/tv_seatA_book"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="小桌"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatA_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatA_title"
+                    android:layout_alignTop="@+id/tv_seatA_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_seatA_title"
+                    android:gravity="center"
+                    android:text="(100桌)"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatA_book"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/line_seat_title"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_book"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="预定"
+                    android:textColor="@color/color_text_white"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatB_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatB_book"
+                    android:layout_alignTop="@+id/tv_seatB_book"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="中桌"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatB_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatB_title"
+                    android:layout_alignTop="@+id/tv_seatB_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_seatB_title"
+                    android:gravity="center"
+                    android:text="(100桌)"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatB_book"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_seatA_book"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_book"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="预定"
+                    android:textColor="@color/color_text_white"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatC_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatC_book"
+                    android:layout_alignTop="@+id/tv_seatC_book"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="大桌"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatC_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_seatC_title"
+                    android:layout_alignTop="@+id/tv_seatC_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_seatC_title"
+                    android:gravity="center"
+                    android:text="(100桌)"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_seatC_book"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_seatB_book"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_book"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="预定"
+                    android:textColor="@color/color_text_white"
+                    android:textSize="18sp"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

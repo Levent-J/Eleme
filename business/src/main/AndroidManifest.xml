@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.levent_j.business">
+    <!-- 基础模块（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 基础模块 END -->
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme.NoActionBar">
+
+        <!--LeanCloud 所需模块-->
+        <!-- 实时通信模块、推送（均需要加入以下声明） START -->
+        <!-- 实时通信模块、推送都要使用 PushService -->
+        <service android:name="com.avos.avoscloud.PushService"/>
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+
+        <!--主页面-->
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--登录页面-->
+        <activity android:name=".login.LoginActivity"/>
+
+        <!--菜单管理页面-->
+        <activity android:name=".menu.MenuActivity"/>
+
+        <!--座位列表页面-->
+        <activity android:name=".seat.seatlist.SeatListActivity"/>
+
+        <!--订单列表页面-->
+        <activity android:name=".order.orderlist.OrderListActivity"/>
+
+        <!--订单详情页面-->
+        <activity android:name=".order.orderdetail.OrderDetailActivity"/>
+
+        <!--信息管理页面-->
+        <activity android:name=".info.InfoActivity"/>
+
+        <!--创建商铺页面-->
+        <activity android:name=".shop.CreateShopActivity"/>
+
+        <!--编辑食物页面-->
+        <activity android:name=".food.EditFoodActivity"/>
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.levent_j.baselibrary.views.MainTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="登录"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="这里是登录"
+        android:textColor="@color/color_gray"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:maxLines="1"
+        android:inputType="phone"
+        android:id="@+id/et_login_phone"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_input_box"
+        android:hint="请输入手机号码"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btn_login_next"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_next"
+        android:text="发送验证码"
+        android:textColor="@color/color_text_white"
+        android:textSize="18sp"
+        android:visibility="visible"/>
+
+    <EditText
+        android:maxLines="1"
+        android:inputType="number"
+        android:id="@+id/et_login_ver_code"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_input_box"
+        android:hint="请输入验证码"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_login_sign"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_next"
+        android:text="登录"
+        android:textColor="@color/color_text_white"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

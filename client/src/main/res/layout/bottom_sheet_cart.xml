@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="392dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="92dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="visible"
+        android:id="@+id/fab_scan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/cart"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/fab_trade"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:backgroundTint="@color/color_orange"
+        app:srcCompat="@drawable/trade"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/fab_trade_none"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:backgroundTint="@color/color_gray_light"
+        app:srcCompat="@drawable/trade"/>
+
+    <LinearLayout
+        android:background="@color/color_gray_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="46dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cark_total_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="总价："
+                android:textColor="@color/color_text_white"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_cark_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="0￥"
+                android:textColor="@color/color_red"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_cart_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_cark_total_price"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

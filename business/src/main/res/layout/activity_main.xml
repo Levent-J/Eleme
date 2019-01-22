@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_light"
+    android:orientation="vertical"
+    tools:context="com.levent_j.business.main.MainActivity">
+
+
+    <com.levent_j.baselibrary.views.MainTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--商家简介-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <!--底部-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/color_primary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_shop_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_text_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="没有商铺信息"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/btn_shop_create"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_next"
+                android:text="创建"
+                android:textColor="@color/color_text_white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <!--顶部 商铺名片-->
+        <LinearLayout
+            android:id="@+id/ll_shop_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_text_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/iv_shop_avatar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="商铺名"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="商铺地址"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="商铺电话"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--管理菜单-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!--菜单管理-->
+            <RelativeLayout
+                android:id="@+id/rl_menu"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/color_text_white">
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/menu"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_menu"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="菜单管理"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <!--座位管理-->
+            <RelativeLayout
+                android:id="@+id/rl_seat"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/color_text_white">
+
+                <ImageView
+                    android:id="@+id/iv_seat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/seat"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_seat"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="座位管理"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+
+            <!--订单管理-->
+            <RelativeLayout
+                android:id="@+id/rl_order"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/color_text_white">
+
+                <ImageView
+                    android:id="@+id/iv_order"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/order"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_order"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="订单管理"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <!--信息管理-->
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/color_text_white">
+
+                <ImageView
+                    android:id="@+id/iv_info"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/info"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_info"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="信息管理"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

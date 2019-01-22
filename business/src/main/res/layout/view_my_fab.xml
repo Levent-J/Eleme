@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_edit_opened"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_add"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:src="@drawable/close"/>
+
+    <ImageView
+
+        android:id="@+id/btn_edit_closed"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_add"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:src="@drawable/edit_seat"/>
+
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btn_edit_opened"
+        android:layout_alignRight="@+id/btn_edit_opened"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_add_seat"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:src="@drawable/add"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_del"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/btn_edit_opened"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/btn_edit_opened"
+        android:background="@drawable/bg_del_seat"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:src="@drawable/edit_del"/>
+</RelativeLayout>
